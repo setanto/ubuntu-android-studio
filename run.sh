@@ -1,7 +1,7 @@
 #!/bin/sh
 
-if [ ! "$(docker ps -q -f name= ubuntu-android-studio)" ]; then
-  if [ "$(docker ps -aq -f status=exited -f name= ubuntu-android-studio)" ]; then
+if [ ! "$(docker ps -q -f name=ubuntu-android-studio)" ]; then
+  if [ "$(docker ps -aq -f status=exited -f name=ubuntu-android-studio)" ]; then
     sudo docker start  ubuntu-android-studio
   else
     docker run -dit \
